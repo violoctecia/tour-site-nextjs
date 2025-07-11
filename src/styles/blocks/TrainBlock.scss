@@ -1,0 +1,333 @@
+.train {
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 100px;
+  }
+
+  .container {
+    background: $green;
+    border-radius: 30px;
+    padding: 24px 0;
+    @include desktop {
+      padding: 50px 30px 30px;
+      border-radius: 50px;
+    }
+
+    h2 {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 124%;
+      text-align: center;
+      color: $white;
+      margin-bottom: 24px;
+      padding: 0 24px;
+      @include desktop {
+        font-size: 100px;
+        padding: 0;
+      }
+      @include desktop2 {
+        margin-bottom: 50px;
+        font-size: 148px;
+        line-height: 90%;
+      }
+    }
+
+    .tourVars_list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 0 24px;
+      margin-bottom: 24px;
+      @include desktop {
+        gap: 22px;
+        padding: 0;
+        margin-bottom: 30px
+      }
+
+      .variant {
+        border-radius: 30px;
+        min-width: 327px;
+        max-width: 327px;
+        padding: 16px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        min-height: 480px;
+        background: $white;
+
+        @include desktop {
+          min-width: unset;
+          max-width: unset;
+          flex: 1;
+
+          width: unset;
+        }
+        @include desktop2 {
+          border-radius: 50px;
+          padding: 20px 30px 30px;
+        }
+
+        .variant_bottom {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          align-items: center;
+
+          @include desktop {
+            gap: 11px;
+          }
+
+          p {
+            font-family: $second-family;
+            font-weight: 400;
+
+            text-align: center;
+            color: $green;
+            font-size: 29px;
+
+            span {
+              font-size: 14px;
+            }
+
+            @include desktop {
+              font-size: 35px;
+              span {
+                font-size: 16px;
+              }
+            }
+            @media (min-width: 1500px) {
+              font-size: 65px;
+              span {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+
+        h3 {
+          font-family: $second-family;
+          font-weight: 400;
+          font-size: 14px;
+          text-align: center;
+          color: $green;
+          height: 65px;
+
+          span {
+            font-size: 10px;
+          }
+
+          @include desktop {
+            font-size: 24px;
+            height: 130px;
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .variant_options {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 78px;
+
+          @include desktop2 {
+            margin-bottom: 100px;
+          }
+          .variant_option {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(14, 145, 107, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+
+            p {
+              font-weight: 400;
+              font-size: 12px;
+              color: $green;
+              max-width: calc(100% - 30px);
+              @media (min-width: 1250px) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.included {
+  border-top: 1px solid rgba(238, 245, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 37px 0 0;
+  margin: 0 24px;
+
+  &.n {
+    ul {
+      margin-bottom: 0 !important;
+    }
+  }
+  @include desktop {
+    padding: 0;
+    margin: 0;
+    column-gap: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    min-height: 300px;
+  }
+  @include desktop2 {
+    min-height: 421px;
+  }
+
+  h3 {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+    margin-bottom: 10px;
+    @include desktop {
+      margin-top: 10px;
+      font-size: 45px;
+      line-height: 55px;
+      width: fit-content;
+      display: flex;
+      max-width: 738px;
+    }
+    @include desktop2 {
+      font-size: 65px;
+      line-height: 75px;
+      margin-left: 30px;
+    }
+    @media (min-width: 1600px) {
+      margin-top: 0;
+      line-height: unset;
+    }
+  }
+
+  .second-text {
+    margin-top: 24px;
+    padding: 10px;
+    border-radius: 14px;
+    background: $white;
+
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $green;
+
+    button, a {
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      font-family: $font-family;
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+
+    @include desktop {
+      margin-top: 0;
+      max-width: 918px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 49%;
+    }
+    @include desktop2 {
+      font-size: 16px;
+      padding: 30px;
+      border-radius: 30px;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+
+    @include desktop {
+      padding-top: 30px;
+      max-width: 738px;
+      white-space: wrap;
+    }
+    @include desktop2 {
+      font-size: 20px;
+    }
+
+    p.text1 {
+      span {
+        font-weight: 600;
+        @include desktop2 {
+          font-weight: 700;
+        }
+      }
+    }
+
+    p.text2 {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 10px;
+      color: $white;
+      @include desktop2 {
+        font-size: 12px;
+      }
+
+    }
+
+    p.price {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $white;
+      margin-bottom: 30px;
+
+      @include desktop2 {
+        font-size: 24px;
+        span {
+          font-size: 16px;
+        }
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+
+    ul {
+      margin-bottom: 30px;
+
+      li {
+        list-style: none;
+        position: relative;
+        padding-left: 1em;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0.6em;
+          width: 0.2em;
+          height: 0.2em;
+          background-color: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+
+  }
+}
+

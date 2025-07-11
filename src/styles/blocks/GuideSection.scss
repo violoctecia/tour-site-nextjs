@@ -1,0 +1,109 @@
+.guide-section {
+  margin-bottom: 60px;
+  @include desktop {
+    margin-bottom: 100px;
+  }
+
+  h2 {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 124%;
+    text-align: center;
+    color: $green;
+    margin-bottom: 24px;
+    @include desktop {
+      font-size: 65px;
+    }
+    @include desktop3 {
+      font-size: 148px;
+      line-height: 90%;
+      margin-bottom: 50px;
+    }
+  }
+
+  p.subtitle {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $green;
+    margin-bottom: 24px;
+    @include desktop {
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      padding-bottom: 24px;
+      border-bottom: 1px solid $green;
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      @include desktop {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 60px;
+        justify-content: space-between;
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .accordions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include desktop {
+          gap: 20px;
+          max-width: 738px;
+          width: 100%;
+        }
+      }
+
+      .group-name {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 14px;
+        color: $green;
+        margin-bottom: 10px;
+        @include desktop {
+          margin-bottom: 0;
+
+        }
+        @include desktop2 {
+          font-size: 24px;
+        }
+
+        span {
+          font-family: $second-family;
+          font-weight: 400;
+          font-size: 29px;
+          text-align: center;
+          color: $green;
+          @include desktop {
+            margin-bottom: 0;
+          }
+          @include desktop2 {
+            font-size: 45px;
+          }
+          @include desktop3 {
+            font-size: 65px;
+          }
+        }
+      }
+    }
+  }
+}

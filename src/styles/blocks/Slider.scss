@@ -1,0 +1,153 @@
+.slider {
+  border-radius: 30px;
+  position: relative;
+
+
+  .slider-img-wrapper {
+    position: relative;
+    aspect-ratio: 327 / 200;
+    user-select: none;
+    pointer-events: none;
+    border: 1px solid $white;
+    overflow: hidden;
+    border-radius: 30px;
+    @include desktop {
+      border-radius: 50px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .custom-nav {
+    display: none;
+    @media (min-width: 800px) {
+      background-color: $white;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 40px;
+      z-index: 5;
+      right: 0;
+      bottom: 0;
+      border-radius: 27px 0 0 0;
+      padding: 17px 20px;
+      align-items: center;
+      height: 54px;
+
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 5;
+      }
+
+      &::before {
+        background-image: url('/images/Vector3.svg');
+        width: 27px;
+        height: 27px;
+        left: -27px;
+        bottom: 0;
+        transform: scaleX(-1);
+      }
+
+      &::after {
+        background-image: url('/images/Vector.svg');
+        width: 27px;
+        height: 27px;
+        right: 0;
+        top: -27px;
+        transform: scaleX(-1);
+      }
+
+      .nav-arrow {
+        color: $green;
+        padding: 0 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .custom-pagination {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $white;
+    height: 28px;
+    z-index: 5;
+    padding: 14px 25px 0;
+    border-radius: 50px 50px 0 0;
+    border: 1px solid $white;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: -14px;
+      width: 17px;
+      height: 14px;
+      background-image: url('/images/Vector2.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+
+    &::before {
+      left: -14px;
+      transform: scaleX(-1);
+      @media (min-width: 800px) {
+        background-image: url('/images/Vector3.svg');
+        width: 27px;
+        height: 27px;
+        left: 0;
+        top: -27px;
+        transform: unset;
+      }
+    }
+
+    &::after {
+      @media (min-width: 800px) {
+        background-image: url('/images/Vector.svg');
+        width: 27px;
+        height: 27px;
+        right: -27px;
+      }
+    }
+
+    @media (min-width: 800px) {
+      border-radius: 0 27px 0 0;
+      left: 0;
+      transform: unset;
+      padding: 17px 20px 17px 0;
+      align-items: center;
+      height: 54px;
+    }
+
+
+    button {
+      border-radius: 100%;
+      border: 1px solid $green;
+      width: 14px;
+      height: 14px;
+      @include desktop {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.active {
+        background-color: $green;
+      }
+    }
+  }
+}

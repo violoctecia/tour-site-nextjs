@@ -1,0 +1,200 @@
+header {
+  padding: 24px 0;
+
+  @include desktop2 {
+    background: $green;
+    border-radius: 0 0 100px 100px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop2 {
+      padding: 0 26px;
+    }
+    @media (min-width: 1900px) {
+      padding: 0;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav {
+      position: absolute;
+      background: $green;
+      border-radius: 15px;
+      top: 57px;
+      left: 24px;
+      width: calc(100% - 48px);
+      z-index: 10;
+      max-height: 0;
+      transition: all 0.3s ease;
+      padding: 0 24px;
+      overflow: hidden;
+      opacity: 0.5;
+
+      @include desktop2 {
+        opacity: 1;
+        padding: 0;
+        max-height: unset;
+        position: static;
+        top: unset;
+        left: unset;
+        border-radius: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 20px;
+      }
+      @media (min-width: 1350px) {
+        margin-left: 40px;
+      }
+      @media (min-width: 1550px) {
+        margin-left: 0;
+      }
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        max-height: 400px;
+        opacity: 1;
+      }
+
+      .r {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include desktop2 {
+          flex-direction: row-reverse;
+          max-width: 578px;
+          justify-content: space-between;
+          padding: 0;
+          align-items: center;
+          gap: 20px;
+        }
+        @include desktop3 {
+          width: 100%;
+
+        }
+
+        .button {
+          padding: 6px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+          @include desktop2 {
+            font-size: 14px;
+            padding: 10px;
+          }
+          @media (min-width: 1350px) {
+            padding: 13px 20px;
+          }
+          @media (min-width: 1550px) {
+            padding: 13px 50px;
+          }
+
+
+          &:first-child {
+            border: 1px solid $white;
+            background: none;
+            @include desktop {
+              &:hover {
+                border: 1px solid $orange;
+                background: $white;
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+
+      .l {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(238, 245, 255, 0.5);
+
+        @include desktop2 {
+          flex-direction: row;
+          padding: 0;
+          border-bottom: unset;
+          gap: 16px;
+          justify-content: space-between;
+          max-width: 1027px;
+        }
+        @media (min-width: 1550px) {
+          margin: 0 auto;
+        }
+        @include desktop3 {
+          gap: 24px;
+        }
+
+        button {
+          font-weight: 600;
+          font-size: 14px;
+          text-transform: uppercase;
+          text-align: start;
+          color: $white;
+          @include desktop {
+            &:hover {
+              color: $orange;
+            }
+          }
+          @include desktop2 {
+            font-size: 12px;
+          }
+          @media (min-width: 1420px) {
+            font-size: 14px;
+          }
+          @include desktop3 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .burger-button {
+      width: 24px;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include desktop2 {
+        display: none;
+      }
+
+      &.open {
+        padding: 0;
+
+        svg {
+          &:last-child {
+            display: block;
+          }
+
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+
+      svg {
+        width: 24px;
+
+        &:last-child {
+          display: none;
+        }
+      }
+
+    }
+  }
+}

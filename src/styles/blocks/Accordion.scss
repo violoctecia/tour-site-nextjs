@@ -1,0 +1,142 @@
+.accordion-item {
+  width: 100%;
+  background: $green;
+  border-radius: 14px;
+
+
+  @include desktop {
+    border-radius: 20px;
+  }
+
+  .accordion-button {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    @include desktop {
+      padding: 15px 20px 20px 15px;
+
+    }
+
+    .accordion-icon {
+      border-radius: 100%;
+      border: 1px solid $white;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 10px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        @include desktop {
+          width: unset;
+          height: unset;
+        }
+      }
+
+      @include desktop {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      .accordion-icon {
+        background: $white;
+
+      }
+    }
+
+    .accordion-title {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $white;
+      text-align: start;
+      margin-right: 40px;
+      @include desktop {
+        font-size: 16px;
+        margin-right: 60px;
+      }
+    }
+
+    .accordion-subtitle {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $white;
+      text-align: start;
+      margin-right: 40px;
+      @include desktop {
+        font-size: 16px;
+        margin-right: 60px;
+      }
+    }
+  }
+
+  .accordion-body {
+
+    .accordion-body__content {
+      padding: 15px 0;
+      margin: 0 10px;
+      border-top: 1px solid rgba(238, 245, 255, 0.5);
+      @include desktop {
+        padding: 20px 0;
+        margin: 0 20px;
+      }
+    }
+  }
+
+  &.white {
+    background: $white;
+    border: 1px solid $green;
+    .accordion-icon {
+      border: 1px solid $green;
+    }
+    .accordion-body {
+
+      .accordion-body__content {
+
+        border-top: 1px solid rgba(14, 145, 107, 0.5);;
+
+      }
+    }
+
+   .accordion-button {
+    justify-content: center;
+     @include desktop {
+       min-height: 80px;
+       padding: 20px;
+     }
+     &[aria-expanded="true"] {
+       .accordion-icon {
+         background: $green;
+
+       }
+     }
+   }
+
+    .accordion-title {
+      color: $green;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+}

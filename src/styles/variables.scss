@@ -1,0 +1,31 @@
+$green: #0e916b;
+$dark-blue: #00315d;
+$light-blue: #228ecd;
+$orange: #f28619;
+$white: #eef5ff;
+
+$font-family: "Poppins", sans-serif;
+$second-family: "Valisca", sans-serif;
+
+@mixin _800 {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+@mixin desktop2 {
+  @media (min-width: 1250px) {
+    @content;
+  }
+}
+
+@mixin desktop3 {
+  @media (min-width: 1750px) {
+    @content;
+  }
+}

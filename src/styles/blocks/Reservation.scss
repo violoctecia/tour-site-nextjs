@@ -1,0 +1,102 @@
+.reservation {
+  padding: 60px 0;
+  @include desktop {
+    padding: 100px 0;
+  }
+
+  h2 {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 124%;
+    text-align: center;
+    color: $green;
+    margin-bottom: 24px;
+    @include desktop {
+      font-size: 65px;
+    }
+    @include desktop3 {
+      font-size: 148px;
+      line-height: 90%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .wrapper {
+    border: 1px solid $green;
+    border-radius: 30px;
+    padding: 10px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 30px;
+      border-radius: 50px;
+      border: 4px solid $green;
+    }
+
+
+
+    form {
+      width: 100%;
+      @include desktop {
+        max-width: 537px;
+        margin-left: 30px;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      @include desktop {
+        width: 53.54%;
+        border-right: 1px solid rgba(14, 145, 107, 0.5);
+        padding-right: 30px;
+        margin-bottom: 0;
+      }
+
+      p.title {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 14px;
+        color: $green;
+        @include desktop {
+          font-size: 24px;
+          max-width: 651px;
+        }
+      }
+
+      p.info {
+        font-weight: 400;
+        font-size: 10px;
+        color: $green;
+        @include desktop {
+          font-size: 12px;
+          max-width: 651px;
+        }
+
+        span, a {
+          font-weight: 400;
+          font-size: 10px;
+          color: $orange;
+          @include desktop {
+            font-size: 12px;
+          }
+        }
+
+        a {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: $orange;
+        }
+      }
+
+    }
+  }
+}

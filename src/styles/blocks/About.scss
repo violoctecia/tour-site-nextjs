@@ -1,0 +1,256 @@
+.about {
+  margin-top: 30px;
+  @include desktop {
+    margin-top: 70px;
+  }
+
+  h2 {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 29px;
+    color: $green;
+    text-align: center;
+    margin-bottom: 24px;
+    @include desktop {
+      font-size: 148px;
+      line-height: 90%;
+      margin-bottom: 50px;
+    }
+  }
+
+  picture {
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    aspect-ratio: 327 / 200;
+    width: 100%;
+    margin-bottom: 24px;
+    user-select: none;
+    pointer-events: none;
+
+
+    @media (min-width: 701px) {
+      border-radius: 0;
+      aspect-ratio: 1776 / 684;
+      margin-bottom: 30px;
+    }
+  }
+
+  .inner_container {
+    position: relative;
+    border-bottom: 1px solid rgba(14, 145, 107, 0.5);
+  }
+
+  .about_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (min-width: 700px) {
+      display: none;
+    }
+
+    &.y {
+      margin-bottom: 24px;
+
+      li {
+        min-width: 100px;
+      }
+
+      li:nth-child(4) {
+        white-space: nowrap;
+        min-width: 200px;
+      }
+    }
+
+    &.x {
+      margin-bottom: 24px;
+
+      li:nth-child(1) {
+        min-width: 120px;
+        padding: 20px 10px;
+      }
+
+      li:nth-child(2) {
+        min-width: 147px;
+        padding: 20px 10px;
+      }
+
+      li:nth-child(3) {
+        text-align: left;
+        min-width: 200px;
+        align-items: flex-start;
+      }
+
+      li:nth-child(4) {
+        min-width: 116px;
+        padding: 20px 10px;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $green;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+      width: 100%;
+
+      li {
+        flex: 1;
+        font-weight: 400;
+        font-size: 14px;
+        color: $white;
+        background: $green;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 14px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .about_h3 {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      margin: 0;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 60px;
+      justify-content: space-between;
+      padding: 0 60px 30px;
+
+    }
+
+
+    h3 {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $green;
+      margin-bottom: 10px;
+
+      @include desktop {
+        font-size: 45px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1250px) {
+        font-size: 65px;
+      }
+
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: $green;
+
+      @include desktop {
+        max-width: 738px;
+        font-size: 20px;
+        padding: 30px 0;
+      }
+
+      span {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+
+  .route {
+    border-radius: 30px;
+    background: $green;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    @media (min-width: 700px) {
+      padding: 30px 60px;
+      border-radius: 50px;
+    }
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-bottom: 100px;
+      gap: 60px;
+      justify-content: space-between;
+    }
+
+
+    h3 {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $white;
+      padding: 0 10px;
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-size: 45px;
+        color: $white;
+      }
+      @media (min-width: 1250px) {
+        font-size: 65px;
+      }
+    }
+
+    .table {
+      overflow-x: scroll;
+      padding: 0 10px;
+      @include desktop {
+        max-width: 738px;
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      .nw {
+        white-space: nowrap;
+      }
+
+      tr {
+        border-bottom: 1px solid rgba(238, 245, 255, 0.5);
+
+        td {
+          font-weight: 400;
+          font-size: 12px;
+          color: $white;
+          padding: 10px 0 13px 0;
+
+          @media (min-width: 1250px) {
+            font-size: 16px;
+            padding: 10px 0;
+          }
+
+          &:nth-child(2), &:nth-child(4) {
+            padding: 0 17px;
+            @media (min-width: 1250px) {
+              padding: 0 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

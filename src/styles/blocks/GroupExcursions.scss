@@ -1,0 +1,466 @@
+.group-excursions {
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 100px;
+  }
+
+  .container {
+    background: $green;
+    border-radius: 30px;
+    padding: 24px 0;
+    @include desktop {
+      padding: 50px 30px 30px;
+      border-radius: 50px;
+    }
+
+    .tours {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      @include desktop {
+        gap: 100px;
+      }
+    }
+
+    .info-wrapper {
+      border-radius: 30px 30px 0 0;
+      padding: 24px;
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 800px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+        position: relative;
+      }
+      @include desktop {
+        border-radius: 50px;
+      }
+
+      .second-info {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (min-width: 800px) {
+          width: 50%;
+        }
+        @include desktop {
+          gap: 30px;
+        }
+
+        .accordions {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          @include desktop {
+            gap: 20px;
+          }
+        }
+
+        h4 {
+          font-family: $second-family;
+          font-weight: 400;
+          font-size: 14px;
+          color: $green;
+          margin-bottom: 10px;
+          @include desktop {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+        }
+
+        p, li {
+          font-weight: 400;
+          font-size: 14px;
+          color: $green;
+          @include desktop {
+            font-size: 16px;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+
+          li {
+            &:first-child {
+              padding-top: 0;
+            }
+
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(14, 145, 107, 0.5);
+            @include desktop {
+              padding: 20px 0 10px;
+            }
+          }
+        }
+      }
+
+      .warning {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        @media (min-width: 800px) {
+          position: absolute;
+          left: 24px;
+          bottom: 24px;
+          width: calc(50% - 60px);
+        }
+        @include desktop {
+          gap: unset;
+        }
+
+        span.warning-title {
+          font-family: $second-family;
+          font-weight: 400;
+          font-size: 29px;
+          line-height: 124%;
+          color: $orange;
+          @include desktop {
+            font-size: 45px;
+            line-height: unset;
+          }
+          @include desktop2 {
+            font-size: 65px;
+          }
+        }
+
+        p {
+          font-family: $font-family;
+          font-size: 14px;
+          color: $green;
+          font-weight: 400;
+          line-height: 124%;
+          @include desktop {
+            font-size: 16px;
+            line-height: unset;
+          }
+
+          .underline {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+          }
+
+          .orange {
+            color: $orange;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+          }
+
+        }
+      }
+
+      .first-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        @media (min-width: 800px) {
+          width: 50%;
+          margin-bottom: 0;
+        }
+
+        h3 {
+          font-family: $second-family;
+          font-weight: 400;
+          font-size: 12px;
+          color: $green;
+          margin-bottom: 24px;
+          @include desktop {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+
+          span {
+            font-size: 14px;
+            @include desktop {
+              font-size: 45px;
+            }
+            @include desktop2 {
+              font-size: 65px;
+            }
+          }
+        }
+
+        .desc {
+          font-weight: 400;
+          font-size: 14px;
+          color: $green;
+          margin-bottom: 24px;
+          @include desktop {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .adv {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 24px;
+          @include desktop2 {
+            margin-bottom: 30px;
+            gap: 20px;
+          }
+
+          p {
+            border: 1px solid $green;
+            border-radius: 14px;
+            padding: 10px 20px;
+            flex: 1 1 140px;
+
+            font-weight: 600;
+            font-size: 12px;
+            color: $green;
+            text-align: center;
+            @include desktop2 {
+              font-weight: 700;
+              font-size: 20px;
+              padding: 25px 20px;
+              border-radius: 20px;
+              flex: unset;
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 124%;
+      text-align: center;
+      color: $white;
+      margin-bottom: 24px;
+      padding: 0 24px;
+      @include desktop {
+        font-size: 65px;
+        padding: 0;
+      }
+      @include desktop2 {
+        font-size: 100px;
+        margin-bottom: 50px;
+        line-height: 90%;
+      }
+      @include desktop3 {
+        font-size: 148px;
+      }
+    }
+
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 24px;
+      //max-width: 447px;
+      margin: 0 auto 24px;
+      @include desktop {
+        gap: 20px;
+        margin-bottom: 50px;
+        //max-width: 547px;
+        max-width: 1158px;
+        padding: 0;
+      }
+
+      p.choose {
+        font-family: $font-family;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        color: $white;
+        @include desktop {
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 10px;
+          color: rgba(238, 245, 255, 0.5);
+          @include desktop {
+            font-size: 20px;
+          }
+        }
+      }
+
+      p.text {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        color: $white;
+        @include desktop {
+          font-size: 16px;
+        }
+
+        span {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+
+    .prices {
+      background: $white;
+
+      @include desktop {
+        background: none;
+      }
+
+      .wrapper {
+        border-radius: 30px 30px 0 0;
+        background: $green;
+        padding: 24px 0 48px;
+        @include desktop {
+          border-radius: unset;
+          padding: 30px 0 38px;
+          border-bottom: 1px solid rgba(238, 245, 255, 0.5);
+        }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 14px;
+        padding: 0 24px;
+        overflow-x: auto;
+        @include desktop {
+          gap: 23px;
+          padding: 0;
+        }
+
+        .block {
+          border-radius: 30px;
+          padding: 10px;
+          background: $white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 327px;
+          max-width: 327px;
+          @include desktop {
+            min-width: unset;
+            max-width: unset;
+            flex: 1;
+          }
+          @include desktop2 {
+            padding: 20px 30px 30px;
+            border-radius: 50px;
+          }
+
+          h4 {
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            color: $green;
+            margin-bottom: 10px;
+            @include desktop2 {
+              font-size: 24px;
+              margin-bottom: 30px;
+            }
+          }
+          button.button {
+            margin-top: auto;
+          }
+          .options {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            margin-bottom: 60px;
+            @include desktop {
+              gap: 30px;
+            }
+
+            .option {
+              border: 1px solid $green;
+              border-radius: 14px;
+              padding: 10px;
+              @include desktop2 {
+                border-radius: 50px;
+                padding: 0 20px 20px;
+              }
+
+              p.option-text {
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 14px;
+                text-align: center;
+                color: $green;
+                @include desktop2 {
+                  font-size: 18px;
+                }
+                @include desktop3 {
+                  font-size: 24px;
+                }
+
+                span {
+                  font-size: 29px;
+                  @include desktop2 {
+                    font-size: 35px;
+                  }
+                  @include desktop3 {
+                    font-size: 65px;
+                  }
+                }
+              }
+
+              p.option-type {
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 14px;
+                text-align: center;
+                color: $green;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                @include desktop2 {
+                  font-size: 18px;
+                }
+                @include desktop3 {
+                  font-size: 24px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      h3 {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 29px;
+        line-height: 124%;
+        text-align: center;
+        color: $white;
+        margin-bottom: 24px;
+        padding: 0 24px;
+        @include desktop {
+          font-size: 45px;
+          padding: 0;
+          line-height: unset;
+          margin-bottom: 28px;
+        }
+        @include desktop2 {
+          font-size: 65px;
+        }
+      }
+    }
+  }
+}
+
+p.accordion-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: $white !important;
+  @include desktop {
+    font-size: 16px;
+  }
+}

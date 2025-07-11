@@ -1,0 +1,133 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Valisca';
+  src: url('/fonts/Valisca.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+  font-weight: normal;
+  list-style-type: none;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+
+button, a {
+  background: none;
+  cursor: pointer;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+.button {
+  border-radius: 14px;
+  padding: 10px 10px;
+  width: 100%;
+  background: $orange;
+  border: 1px solid $orange;
+  white-space: nowrap;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  &.white {
+    border: 1px solid $white;
+    background: none;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 13px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    &:hover {
+      background: $white;
+      color: $orange;
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.container {
+  padding: 0 24px;
+  max-width: 1776px;
+  position: relative;
+  @media (min-width: 1000px) {
+    margin: 0 24px;
+    padding: 0;
+  }
+  @media (min-width: 1824px) {
+    margin: 0 auto;
+  }
+}
+
+@import "blocks/Header";
+@import "blocks/About";
+@import "blocks/TourVars";
+@import "blocks/TrainBlock";
+@import "blocks/GroupExcursions";
+@import "blocks/Slider";
+@import "blocks/Accordion";
+@import "blocks/Reservation";
+@import "blocks/OtherTours";
+@import "blocks/GuideSection";
+@import "blocks/FAQ";
+@import "blocks/Footer";
