@@ -22,7 +22,7 @@ export default function ParentForm() {
             method="POST"
             data-netlify="true"
         >
-            <input type="hidden" name="form-name" value="lead" />
+            <input type="hidden" name="lead-form" value="lead" />
 
             <div className={styles.inputs}>
                 <input
