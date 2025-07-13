@@ -30,6 +30,7 @@ export default function Hero() {
                     <div className={styles.formWrapper}>
                             <Image
                                 src="/images/HeroForm.svg"
+                                fetchPriority={"high"}
                                 alt=""
                                 fill
                                 priority={true}

@@ -85,7 +85,8 @@ export const Header = () => {
                     <Image src="/images/HeadLogo.svg"
                            alt=""
                            width="50"
-                           height="50" />
+                           height="50"
+                           priority={true}/>
                 </Link>
 
                 <div className={`nav ${isOpen ? 'open' : ''}`} ref={navRef}>

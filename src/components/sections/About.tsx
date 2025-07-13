@@ -23,7 +23,8 @@ export const About = () => {
                     <picture>
                         <source
                             media="(max-width: 700px)"
-                            srcSet="/images/About-mobile.svg"
+                            srcSet="/images/About-mobile.png"
+
                         />
                         <Image
                             src="/images/About.svg"
