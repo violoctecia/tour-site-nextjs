@@ -1,12 +1,10 @@
 'use client';
 
-import React, { useId, useState } from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/blocks/Hero.module.scss';
 import { InputMask } from '@react-input/mask';
 
 export default function ParentForm() {
-    const formId = useId();
-
     const [form, setForm] = useState({
         name: '',
         phone: '',
@@ -22,27 +20,12 @@ export default function ParentForm() {
         }));
     };
 
-    const handleSubmit = (event: any) => {
-        event.preventDefault();
-
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-
-
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            // @ts-ignore
-            body: new URLSearchParams(formData).toString()
-        })
-            .then(() => alert('success'))
-            .catch(error => alert(error));
-    };
-
-
     return (
-        <form name="contact" method="POST" data-netlify="true"
-              onSubmit={handleSubmit}>
+        <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+        >
             <input type="hidden" name="form-name" value="contact" />
 
             <div className={styles.inputs}>
