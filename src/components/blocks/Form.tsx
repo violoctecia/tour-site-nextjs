@@ -1,12 +1,10 @@
 'use client';
 
-import React, { useId, useState } from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/blocks/Hero.module.scss';
 import { InputMask } from '@react-input/mask';
 
 export default function ParentForm() {
-    const formId = useId();
-
     const [form, setForm] = useState({
         name: '',
         phone: '',
@@ -40,7 +38,7 @@ export default function ParentForm() {
 
 
     return (
-        <form name="lead" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="lead" onSubmit={handleSubmit}>
             <input type="hidden" name="lead-form" value="lead" />
 
             <div className={styles.inputs}>
