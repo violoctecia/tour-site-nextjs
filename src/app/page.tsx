@@ -41,34 +41,34 @@ export default function Home() {
         <main>
             <Hero />
             <About />
-            {/*<TourVars />*/}
-            {/*<TrainBlock />*/}
-            {/*<ToursSection title={groupTours.title}*/}
-            {/*              descBold={groupTours.descBold}*/}
-            {/*              isInd={false}*/}
-            {/*              scrollTo="form1"*/}
-            {/*              descThin={groupTours.descThin}*/}
-            {/*              data={groupTours.data}*/}
-            {/*              id="groupTours" />*/}
+            <TourVars />
+            <TrainBlock />
+            <ToursSection title={groupTours.title}
+                          descBold={groupTours.descBold}
+                          isInd={false}
+                          scrollTo="form1"
+                          descThin={groupTours.descThin}
+                          data={groupTours.data}
+                          id="groupTours" />
 
-            {/*<ReservationSection id="form1" />*/}
+            <ReservationSection id="form1" />
 
-            {/*<ToursSection title={indTours.title}*/}
-            {/*              isInd*/}
-            {/*              scrollTo="form2"*/}
-            {/*              descBold={indTours.descBold}*/}
-            {/*              descThin={indTours.descThin}*/}
-            {/*              data={indTours.data}*/}
-            {/*              id="indTours" />*/}
+            <ToursSection title={indTours.title}
+                          isInd
+                          scrollTo="form2"
+                          descBold={indTours.descBold}
+                          descThin={indTours.descThin}
+                          data={indTours.data}
+                          id="indTours" />
 
-            {/*<ReservationSection id="form2" />*/}
+            <ReservationSection id="form2" />
 
-            {/*<OtherTours />*/}
+            <OtherTours />
 
-            {/*<ReservationSection id="form3" />*/}
-            {/*/!*<OnlyClient />*!/*/}
-            {/*<GuideSection />*/}
-            {/*<FAQ />*/}
+            <ReservationSection id="form3" />
+            {/*<OnlyClient />*/}
+            <GuideSection />
+            <FAQ />
         </main>
 
     );
