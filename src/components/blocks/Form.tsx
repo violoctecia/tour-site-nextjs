@@ -22,8 +22,27 @@ export default function ParentForm() {
         }));
     };
 
+    const handleSubmit = (event: any) => {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            // @ts-ignore
+            body: new URLSearchParams(formData).toString()
+        })
+            .then(() => alert('success'))
+            .catch(error => alert(error));
+    };
+
+
     return (
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true"
+              onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
 
             <div className={styles.inputs}>

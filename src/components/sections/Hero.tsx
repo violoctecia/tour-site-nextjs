@@ -32,7 +32,7 @@ export default function Hero() {
                                 src="/images/HeroForm.svg"
                                 alt=""
                                 fill
-                                priority
+                                priority={true}
                                 className={styles.formWrapperImage}
                             />
                         <div className={styles.formInnerWrapper}>
