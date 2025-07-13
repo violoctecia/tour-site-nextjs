@@ -43,30 +43,30 @@ export default function Home() {
             <About />
             <TourVars />
             <TrainBlock />
-            {/*<ToursSection title={groupTours.title}*/}
-            {/*              descBold={groupTours.descBold}*/}
-            {/*              isInd={false}*/}
-            {/*              scrollTo="form1"*/}
-            {/*              descThin={groupTours.descThin}*/}
-            {/*              data={groupTours.data}*/}
-            {/*              id="groupTours" />*/}
+            <ToursSection title={groupTours.title}
+                          descBold={groupTours.descBold}
+                          isInd={false}
+                          scrollTo="form1"
+                          descThin={groupTours.descThin}
+                          data={groupTours.data}
+                          id="groupTours" />
 
-            {/*<ReservationSection id="form1" />*/}
+            <ReservationSection id="form1" />
 
-            {/*<ToursSection title={indTours.title}*/}
-            {/*              isInd*/}
-            {/*              scrollTo="form2"*/}
-            {/*              descBold={indTours.descBold}*/}
-            {/*              descThin={indTours.descThin}*/}
-            {/*              data={indTours.data}*/}
-            {/*              id="indTours" />*/}
+            <ToursSection title={indTours.title}
+                          isInd
+                          scrollTo="form2"
+                          descBold={indTours.descBold}
+                          descThin={indTours.descThin}
+                          data={indTours.data}
+                          id="indTours" />
 
-            {/*<ReservationSection id="form2" />*/}
+            <ReservationSection id="form2" />
 
-            {/*<OtherTours />*/}
+            <OtherTours />
 
-            {/*<ReservationSection id="form3" />*/}
-            <OnlyClient />
+            <ReservationSection id="form3" />
+            {/*<OnlyClient />*/}
             <GuideSection />
             <FAQ />
         </main>

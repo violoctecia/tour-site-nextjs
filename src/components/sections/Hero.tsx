@@ -28,6 +28,13 @@ export default function Hero() {
             <section className={styles.form}>
                 <div className="container">
                     <div className={styles.formWrapper}>
+                            <Image
+                                src="/images/HeroForm.svg"
+                                alt=""
+                                fill
+                                priority
+                                className={styles.formWrapperImage}
+                            />
                         <div className={styles.formInnerWrapper}>
                             <div className={styles.formInnerWrapperText}>
                                 <p className={styles.firstText}>
@@ -43,7 +50,7 @@ export default function Hero() {
                                 </p>
                             </div>
                             <div className={styles.line}></div>
-                            <Form/>
+                            <Form />
                         </div>
                     </div>
                 </div>
