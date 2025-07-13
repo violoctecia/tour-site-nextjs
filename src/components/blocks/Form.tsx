@@ -23,8 +23,9 @@ export default function ParentForm() {
     };
 
     return (
-        <form name={`form-${formId}`} method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value={`form-${formId}`} />
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+
             <div className={styles.inputs}>
                 <input
                     type="text"
