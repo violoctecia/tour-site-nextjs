@@ -39,8 +39,6 @@ export default function ParentForm() {
 
     return (
         <form name="lead" onSubmit={handleSubmit}>
-            <input type="hidden" name="lead-form" value="lead" />
-
             <div className={styles.inputs}>
                 <input
                     type="text"
