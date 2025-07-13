@@ -18,11 +18,11 @@ export default function ParentForm() {
 
     return (
         <form
-            name="contact"
+            name="lead"
             method="POST"
             data-netlify="true"
         >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="lead" />
 
             <div className={styles.inputs}>
                 <input
