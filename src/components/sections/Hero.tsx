@@ -29,7 +29,7 @@ export default function Hero() {
                 <div className="container">
                     <div className={styles.formWrapper}>
                             <Image
-                                src="/images/HeroForm.svg"
+                                src="/images/HeroForm.png"
                                 fetchPriority={"high"}
                                 alt=""
                                 fill
