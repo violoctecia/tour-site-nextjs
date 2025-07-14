@@ -10,7 +10,7 @@
 
   .accordion-button {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background: none;
     display: flex;
     flex-direction: column;
@@ -56,6 +56,12 @@
       .accordion-icon {
         background: $white;
 
+        svg {
+          transform: rotate(45deg);
+          path {
+            fill: $green;
+          }
+        }
       }
     }
 
@@ -102,9 +108,11 @@
   &.white {
     background: $white;
     border: 1px solid $green;
+
     .accordion-icon {
       border: 1px solid $green;
     }
+
     .accordion-body {
 
       .accordion-body__content {
@@ -114,19 +122,26 @@
       }
     }
 
-   .accordion-button {
-    justify-content: center;
-     @include desktop {
-       min-height: 80px;
-       padding: 20px;
-     }
-     &[aria-expanded="true"] {
-       .accordion-icon {
-         background: $green;
+    .accordion-button {
+      justify-content: center;
+      @include desktop {
+        min-height: 80px;
+        padding: 20px;
+      }
 
-       }
-     }
-   }
+      &[aria-expanded="true"] {
+        .accordion-icon {
+          background: $green;
+
+          svg {
+            transform: rotate(45deg);
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
 
     .accordion-title {
       color: $green;

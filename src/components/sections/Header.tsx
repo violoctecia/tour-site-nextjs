@@ -10,20 +10,20 @@ export const Header = () => {
     const navRef = useRef<HTMLDivElement>(null);
     const burgerRef = useRef<HTMLButtonElement>(null);
 
-    useEffect(() => {
-        const handler = (e: any) => e.preventDefault();
-
-        document.addEventListener("contextmenu", handler); // отключает правую кнопку
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-                e.preventDefault(); // запрещает открыть DevTools
-            }
-        });
-
-        return () => {
-            document.removeEventListener("contextmenu", handler);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handler = (e: any) => e.preventDefault();
+    //
+    //     document.addEventListener("contextmenu", handler); // отключает правую кнопку
+    //     document.addEventListener("keydown", (e) => {
+    //         if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+    //             e.preventDefault(); // запрещает открыть DevTools
+    //         }
+    //     });
+    //
+    //     return () => {
+    //         document.removeEventListener("contextmenu", handler);
+    //     };
+    // }, []);
 
 
     const nav = [

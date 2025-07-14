@@ -12,8 +12,6 @@ import { ReservationSection } from '@/components/sections/ReservationSection';
 import { OtherTours } from '@/components/sections/OtherTours';
 import { GuideSection } from '@/components/sections/GuideSection';
 import { FAQ } from '@/components/sections/FAQ';
-import { OnlyClient } from '@/components/sections/OnlyClient';
-
 
 export default function Home() {
 
@@ -66,7 +64,6 @@ export default function Home() {
             <OtherTours />
 
             <ReservationSection id="form3" />
-            {/*<OnlyClient />*/}
             <GuideSection />
             <FAQ />
         </main>

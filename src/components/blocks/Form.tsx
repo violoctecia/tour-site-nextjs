@@ -11,6 +11,9 @@ export default function ParentForm() {
         checkbox: false
     });
 
+    const [error, setError] = useState<string | null>(null);
+    const [success, setSuccess] = useState<boolean>(false);
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value, type, checked } = e.target;
 
@@ -18,13 +21,27 @@ export default function ParentForm() {
             ...prev,
             [name]: type === 'checkbox' ? checked : value
         }));
+
+        if (name === 'phone') {
+            setError(null);
+        }
     };
 
-    const handleSubmit = (event: any) => {
+    const isPhoneValid = (phone: string) => {
+        return !phone.includes('_') && phone.length === 18;
+    };
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const formData = new FormData(event.target);
+        if (!isPhoneValid(form.phone)) {
+            setError('Пожалуйста, полностью заполните номер телефона.');
+            setSuccess(false);
+            return;
+        }
 
+        // @ts-ignore
+        const formData = new FormData(event.target);
 
         fetch("/__forms.html", {
             method: "POST",
@@ -32,10 +49,20 @@ export default function ParentForm() {
             // @ts-ignore
             body: new URLSearchParams(formData).toString()
         })
-            .then(() => alert('success'))
-            .catch(error => alert(error));
+            .then(() => {
+                setSuccess(true);
+                setError(null);
+                setForm({
+                    name: '',
+                    phone: '',
+                    checkbox: false
+                });
+            })
+            .catch(() => {
+                setError('Произошла ошибка при отправке формы. Попробуйте ещё раз.');
+                setSuccess(false);
+            });
     };
-
 
     return (
         <form name="lead" onSubmit={handleSubmit}>
@@ -58,6 +85,7 @@ export default function ParentForm() {
                     replacement={{ _: /\d/ }}
                     value={form.phone}
                     name="phone"
+                    autoComplete="tel"
                     onChange={handleChange}
                     required
                     placeholder="+7 (999) 999-99-99"
@@ -77,7 +105,18 @@ export default function ParentForm() {
                     </label>
                 </div>
             </div>
+
             <button className="button" type="submit">Отправить заявку</button>
+
+            {error && (
+                <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>
+            )}
+
+            {success && (
+                <p style={{ color: 'green', marginTop: '10px' }}>
+                    Заявка успешно отправлена!
+                </p>
+            )}
         </form>
     );
 }

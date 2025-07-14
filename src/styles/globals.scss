@@ -119,6 +119,11 @@ button, a {
   }
 }
 
+strong {
+  font-weight: 600;
+}
+
+
 @import "blocks/Header";
 @import "blocks/About";
 @import "blocks/TourVars";

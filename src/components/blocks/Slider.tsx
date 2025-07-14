@@ -43,6 +43,7 @@ export default function Slider({images}: {images: string[]}) {
                                 alt=""
                                 fill
                                 priority={false}
+                                sizes="(max-width: 800px) 100vw, 50vw"
                             />
                         </div>
                     </SwiperSlide>
