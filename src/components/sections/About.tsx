@@ -27,7 +27,7 @@ export const About = () => {
 
                         />
                         <Image
-                            src="/images/About.png"
+                            src="/images/About.svg"
                             alt="Жемчужина Кавказа"
                             fill
                             priority={false}
