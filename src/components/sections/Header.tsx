@@ -3,49 +3,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { handleScroll } from '@/composables/scrollTo';
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
     const burgerRef = useRef<HTMLButtonElement>(null);
 
-    // useEffect(() => {
-    //     const handler = (e: any) => e.preventDefault();
-    //
-    //     document.addEventListener("contextmenu", handler); // отключает правую кнопку
-    //     document.addEventListener("keydown", (e) => {
-    //         if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-    //             e.preventDefault(); // запрещает открыть DevTools
-    //         }
-    //     });
-    //
-    //     return () => {
-    //         document.removeEventListener("contextmenu", handler);
-    //     };
-    // }, []);
-
 
     const nav = [
         {
             value: 'Билеты на поезд',
-            id: 'trainTours'
+            target: '/#trainTours',
         },
         {
-            value:  'Групповые туры',
-            id: 'groupTours'
+            value: 'Групповые туры',
+            target: '/#groupTours',
         },
         {
             value: 'Индивидуальные туры',
-            id: 'indTours'
+            target: '/#indTours',
         },
         {
-            value:  'Частые вопросы',
-            id: 'faq'
+            value: 'Частые вопросы',
+            target: '/#faq',
         },
         {
-            value: 'Памятка туристам',
-            id: 'guide'
+            value: 'Журнал',
+            target: '/journal',
         },
     ];
 
@@ -72,12 +56,6 @@ export const Header = () => {
     }, [isOpen]);
 
 
-
-    const scroll = (id: string) => {
-        setIsOpen(false);
-        handleScroll(id)
-    }
-
     return (
         <header>
             <div className="container">
@@ -86,23 +64,24 @@ export const Header = () => {
                            alt=""
                            width="50"
                            height="50"
-                           priority={true}/>
+                           priority={true} />
                 </Link>
 
                 <div className={`nav ${isOpen ? 'open' : ''}`} ref={navRef}>
                     <div className="l">
                         {nav.map((item, idx) => (
-                            <button key={idx} onClick={() => scroll(item.id)}>{item.value}</button>
+                            <Link onClick={() => setIsOpen(false)} href={item.target} key={idx}>{item.value}</Link>
                         ))}
                     </div>
                     <div className="r">
-                        <a href="tel:+74951090444" className="button">+7 (495) 10-90-444</a>
+                        <a href="tel:+79951447659" className="button">+7 (995) 144-76-59</a>
                         <button className="button">ОТДЕЛ БРОНИРОВАНИЯ</button>
                     </div>
 
                 </div>
 
-                <button className={`burger-button ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)} ref={burgerRef}>
+                <button className={`burger-button ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}
+                        ref={burgerRef}>
                     <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0 1C0 0.447715 0.447715 0 1 0H23C23.5523 0 24 0.447715 24 1C24 1.55228 23.5523 2 23 2H1C0.447716 2 0 1.55228 0 1Z"

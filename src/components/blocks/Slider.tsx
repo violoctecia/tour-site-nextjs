@@ -21,11 +21,12 @@ export default function Slider({images}: {images: string[]}) {
                 effect="fade"
                 fadeEffect={{ crossFade: true }}
                 slidesPerView={1}
+                navigation={{ prevEl: null, nextEl: null }} // 💡 это важно
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
 
                     setTimeout(() => {
-                        if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                        if (swiper.params?.navigation && typeof swiper.params?.navigation !== 'boolean') {
                             swiper.params.navigation.prevEl = prevRef.current;
                             swiper.params.navigation.nextEl = nextRef.current;
                             swiper.navigation.init();
@@ -35,7 +36,8 @@ export default function Slider({images}: {images: string[]}) {
                 }}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
-                {images.map((img, i) => (
+
+            {images.map((img, i) => (
                     <SwiperSlide key={i}>
                         <div className="slider-img-wrapper">
                             <Image

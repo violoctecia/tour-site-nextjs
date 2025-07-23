@@ -1,13 +1,13 @@
 import styles from '@/styles/blocks/Hero.module.scss';
 import Image from 'next/image';
-import Form from '@/components/blocks/Form'
+import Form from '@/components/blocks/Form';
 
 export default function Hero() {
 
 
     return (
         <>
-            <section className={styles.hero}>
+            <section className={styles.hero} id="hero-form">
                 <div className="container">
                     <div className={styles.imageWrapper}>
                         <Image
@@ -25,29 +25,30 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className={styles.form}>
+            <section className={styles.form} >
                 <div className="container">
                     <div className={styles.formWrapper}>
-                            <Image
-                                src="/images/HeroForm.png"
-                                fetchPriority={"high"}
-                                alt=""
-                                fill
-                                priority={true}
-                                className={styles.formWrapperImage}
-                            />
+                        <Image
+                            src="/images/HeroForm.png"
+                            fetchPriority={'high'}
+                            alt=""
+                            fill
+                            priority={true}
+                            className={styles.formWrapperImage}
+                        />
                         <div className={styles.formInnerWrapper}>
                             <div className={styles.formInnerWrapperText}>
-                                <p className={styles.firstText}>
-                                    <span>Круизный поезд «Жемчужина Кавказа»</span><br /> Семидневное путешествие на
-                                    комфортабельном
-                                    поезде, который отправляется из <span>Москвы</span>, и позволяет туристам
-                                    из <span>Воронежа</span> и <span>Ростова-на-Дону</span> присоединиться к
-                                    путешествию.
-                                </p>
+                                <div className={styles.firstText}>
+                                    <h1><span>Круизный поезд «Жемчужина Кавказа»</span></h1>
+                                    <p>Семидневное путешествие на комфортабельном
+                                        поезде, который отправляется из <span>Москвы</span>, и позволяет туристам
+                                        из <span>Воронежа</span> и <span>Ростова-на-Дону</span> присоединиться к
+                                        путешествию.
+                                    </p>
+                                </div>
                                 <p className={styles.secondText}>
                                     Актуальное расписание, стоимость билетов и бронирование экскурсий онлайн доступны на
-                                    нашем сайте и по <a href="tel:+74951090444">телефону</a>.
+                                    нашем сайте и по <a href="tel:+79951447659">телефону</a>.
                                 </p>
                             </div>
                             <div className={styles.line}></div>

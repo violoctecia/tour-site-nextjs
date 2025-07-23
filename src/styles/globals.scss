@@ -1,4 +1,6 @@
 @import "variables";
+@import "blocks/Header";
+@import "blocks/Footer";
 
 @font-face {
   font-family: 'Poppins';
@@ -50,7 +52,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: all 0.2s ease;
+  //transition: all 0.2s ease;
   font-weight: normal;
   list-style-type: none;
   text-decoration: none;
@@ -124,15 +126,3 @@ strong {
 }
 
 
-@import "blocks/Header";
-@import "blocks/About";
-@import "blocks/TourVars";
-@import "blocks/TrainBlock";
-@import "blocks/GroupExcursions";
-@import "blocks/Slider";
-@import "blocks/Accordion";
-@import "blocks/Reservation";
-@import "blocks/OtherTours";
-@import "blocks/GuideSection";
-@import "blocks/FAQ";
-@import "blocks/Footer";

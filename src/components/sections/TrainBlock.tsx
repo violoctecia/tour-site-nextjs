@@ -105,7 +105,7 @@ export const TrainBlock = () => {
                             </div>
                             <div className="variant_bottom">
                                 <p dangerouslySetInnerHTML={{ __html: item.price }} />
-                                <button className='button'>купить  билет</button>
+                                <button className='button'>купить билет</button>
                             </div>
                         </div>
                     ))}
@@ -122,8 +122,7 @@ export const TrainBlock = () => {
                         <p className="text1">Стоимость билета <span className="b">специализированных вагонов-купе для маломобильных:</span>
                         </p>
                         <p className="price"><span>от</span> 11 708 <span>до</span> 24 566 <span>р./чел.</span></p>
-                        <p className="text2">Актуальную стоимость и наличие мест уточняйте в отделе броинрования: +7
-                            (495) 10-90-444</p>
+                        <p className="text2">Актуальную стоимость и наличие мест уточняйте в отделе броинрования: +7 (995) 144-76-59</p>
                     </div>
                     <p className="second-text">
                         К билету на круизном поезде вы можете добавить групповые или индивидуальные экскурсии. Изучите

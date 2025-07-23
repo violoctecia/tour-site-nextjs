@@ -90,8 +90,9 @@ export const Tour = ({ data, isInd, scrollTo }: { data: ITourData, isInd: boolea
                 </div>
                 <p className="second-text">
                     Актуальную стоимость уточняйте в отделе бронирования по телефону <a className="orange"
-                                                                                        href="tel:+74951090444">+7 (495)
-                    10-90-444</a> или после
+                                                                                        href="tel:+79951447659">
+                    +7 (995) 144-76-59
+                </a> или после
                     заполнения <button className="orange" onClick={() => handleScroll(scrollTo)}>формы онлайн-бронирования</button> на сайте
                 </p>
             </div>
